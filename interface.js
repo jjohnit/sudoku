@@ -776,8 +776,8 @@ function numberkeyhtml() {
           handglyph(j) + '</div></td></tr>';
   }
   result += '<tr><td class=numberkey-cell id=nk0>' +
-        '<div class="eraser nk0">' +
-        '&#xf12d;</div></td></tr>';
+        '<i class="fa-solid fa-trash">' +
+        '</i></td></tr>';
   result += '</table>';
   return result;
 }
