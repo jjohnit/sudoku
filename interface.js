@@ -297,7 +297,7 @@ function handglyph(text) {
 
 // Clicks in the number palette.
 
-$(document).on('click', 'td.numberkey-cell', function(ev) {
+$(document).on('click', '.numberkey-cell', function(ev) {
   var num = parseInt($(this).attr('id').substr(2));
   setcurnumber(num);
   ev.stopPropagation();
@@ -504,7 +504,7 @@ function setvisiblefocus(kf) {
 // Set the currently-selected number.  Zero is the eraser.
 
 function setcurnumber(num) {
-  $('td.numberkey-cell').toggleClass('selected', false);
+  $('.numberkey-cell').toggleClass('selected', false);
   $('#nk' + num).toggleClass('selected', true);
   curnumber = num;
 }
@@ -769,16 +769,21 @@ function boardhtml() {
 // Generates HTML for the number palette from 1 to N, plus an eraser.
 
 function numberkeyhtml() {
-  var result = '<table class=numberkey>';
+  // var result = '<table class=numberkey>';
+  var result = '<div class=numberkey-container>';
   for (var j = 1; j <= Sudoku.N; ++j) {
-    result += '<tr><td class=numberkey-cell id=nk' + j + '>' +
-        '<div class="sudoku-answer nk' + j + '">' +
-          handglyph(j) + '</div></td></tr>';
+    // result += '<tr><td class=numberkey-cell id=nk' + j + '>' +
+    //     '<div class="sudoku-answer nk' + j + '">' +
+    //       handglyph(j) + '</div></td></tr>';
+    result += '<div class=numberkey-cell id=nk' + j + '>' +
+    '<div class="sudoku-answer numberkey-text nk' + j + '">' + handglyph(j) + '</div></div>';
   }
-  result += '<tr><td class=numberkey-cell id=nk0>' +
-        '<i class="fa-solid fa-trash">' +
-        '</i></td></tr>';
-  result += '</table>';
+  // result += '<tr><td class=numberkey-cell id=nk0>' +
+  //       '<i class="fa-solid fa-trash">' +
+  //       '</i></td></tr>';
+  result += '<div class=numberkey-cell id=nk0>' + 
+    '<i class="fa-solid fa-trash fa-xl">' +'</div>';
+  // result += '</table>';
   return result;
 }
 
