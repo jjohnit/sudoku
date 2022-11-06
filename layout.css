@@ -53,12 +53,6 @@ h1 {
   margin-bottom: 0;
 }
 
-/* Left and right column spacing */
-#leftlayout,
-#rightlayout {
-  vertical-align: middle;
-  min-width: 120px;
-}
 
 /* Buttons underneath the Sudoku board */
 /* input[type="button"] {
@@ -69,11 +63,11 @@ h1 {
   padding: 3px 8px;
   border-radius: 8px;
   margin: 1px 3px; }
-input[type="button"]:hover {
+  input[type="button"]:hover {
   background: silver; } */
 
-/* The title of the puzzle */
-.puzzlename {
+  /* The title of the puzzle */
+  .puzzlename {
   text-align: center;
   font: 24pt "Open Sans";
   font-weight: 800;
@@ -289,6 +283,18 @@ div.sudoku-popup#intro {
   font-size: 14px;
 }
 
+.main-container{
+  display: flex;
+}
+
+/* Left and right column spacing */
+#leftlayout,
+#rightlayout {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
 /* row {
   justify-content: center;
   align-items: center;
@@ -300,9 +306,17 @@ div.sudoku-popup#intro {
   width: fit-content;
 }
 
+#prevbutton, #nextbutton {
+  width: fit-content;
+}
+
+/* #prevbutton {
+  float: left;
+}
+
 #nextbutton {
   float: right;
-}
+} */
 
 .right-layout-button{
   margin: 10px;
