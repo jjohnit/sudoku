@@ -398,8 +398,18 @@ $(document).on('click', 'td.sudoku-cell', function(ev) {
 // Detects if a modifier key is pressed.
 
 function isalt(ev) {
-  console.log(ev);
-  return (ev.which == 3) || (ev.ctrlKey) || (ev.shiftKey) || $('#small-num')[0].checked;
+  let flag = (ev.which == 3) || (ev.ctrlKey) || (ev.shiftKey) || $('#small-num')[0].checked;
+  if (flag) {
+    // The method used for using small numbers
+    let method = (ev.ctrlKey) ? 'Control key' :
+      (ev.shiftKey) ? 'Shift key' :
+      ($('#small-num')[0].checked) ? 'Check box' : 'Other';
+    // Log the instances when user used small numbers to fill sudoku
+    $(document).trigger('log', ['small-numbers', {
+      method: method
+    }]);
+  }
+  return flag;
 }
 
 
