@@ -66,8 +66,8 @@ h1 {
   input[type="button"]:hover {
   background: silver; } */
 
-  /* The title of the puzzle */
-  .puzzlename {
+/* The title of the puzzle */
+.puzzlename {
   text-align: center;
   font: 24pt "Open Sans";
   font-weight: 800;
@@ -283,17 +283,21 @@ div.sudoku-popup#intro {
   font-size: 14px;
 }
 
-.main-container{
-  display: flex;
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
 }
 
 /* Left and right column spacing */
-#leftlayout,
+/* #leftlayout,
 #rightlayout {
   display: grid;
   justify-content: center;
   align-content: center;
-}
+} */
 
 /* row {
   justify-content: center;
@@ -301,23 +305,24 @@ div.sudoku-popup#intro {
   text-align: center;
 } */
 
-#centerlayout {
+/* #centerlayout {
   margin: 0 auto;
   width: fit-content;
-}
+} */
 
-#prevbutton, #nextbutton {
+#prevbutton,
+#nextbutton {
   width: fit-content;
 }
 
-/* #prevbutton {
+#prevbutton {
   float: left;
 }
 
 #nextbutton {
   float: right;
-} */
+}
 
-.right-layout-button{
+.right-layout-button {
   margin: 10px;
 }
