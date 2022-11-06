@@ -398,7 +398,8 @@ $(document).on('click', 'td.sudoku-cell', function(ev) {
 // Detects if a modifier key is pressed.
 
 function isalt(ev) {
-  return (ev.which == 3) || (ev.ctrlKey) || (ev.shiftKey);
+  console.log(ev);
+  return (ev.which == 3) || (ev.ctrlKey) || (ev.shiftKey) || $('#small-num')[0].checked;
 }
 
 
@@ -441,6 +442,7 @@ function flippage(skip) {
 
 $(document).on('click', '#clearbutton', function(ev) {
   hidepopups();
+  $('#small-num').prop('checked', false);
   var state = currentstate();
   var cleared = {puzzle: state.puzzle, seed: state.seed,
                  answer:[], work:[], gentime: (new Date).getTime()};
