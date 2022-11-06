@@ -17,6 +17,7 @@
    <script src="algorithm.js"></script>
    <script src="hintmaker.js"></script>
    <script src="interface.js"></script>
+   <script src="as1.js"></script>
    <!-- Remove this script to disable logging -->
    <script src="logging.js"></script>
 </head>
@@ -40,11 +41,11 @@
             </div>
          </div>
       </div>
-      <div class="row col-8 mx-auto main-container">
-         <div class="col-3" id="leftlayout"></div>
-         <div class="col-6">
+      <div class="col-8 main-container mx-auto">
+         <div id="leftlayout"></div>
+         <div>
             <div id="centerlayout"></div>
-            <div class="row" style="justify-content: space-between;">
+            <div>
                <button class="btn btn-outline-secondary btn-sm" type="button" id="prevbutton"
                   title="Previous puzzle.">&laquo;
                   Previous</button>
@@ -52,7 +53,7 @@
                   &raquo;</button>
             </div>
          </div>
-         <div class="col-3" id="rightlayout">
+         <div id="rightlayout">
             <div class="align-middle">
                <div class="right-layout-button row mx-5">
                   <button type="button" id="checkbutton" class="btn btn-outline-success btn-sm"
