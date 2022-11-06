@@ -25,7 +25,7 @@
 <body>
    <div class="container">
       <div>
-         <div class="row" align="center">
+         <div class="row" align="center" style="margin-top: 16px;">
             <center>
                <h1>6.831 Sudokui</h1>
                <p style="margin-top:0">Your task: solve puzzles #1-#5 or more.</p>
@@ -42,10 +42,14 @@
          </div>
       </div>
       <div class="col-8 main-container mx-auto">
-         <div id="leftlayout">
-            <div style="padding: 4px;">
-               <label for="small-num">Small numbers</label>
-               <input type="checkbox" id="small-num">
+         <div>
+            <i id="help-numberkey" class="fa fa-duotone fa-circle-info" data-toggle="tooltip"
+               title="Keyboard can be used for selecting a number.&#013;Use spacebar for delete."></i>
+            <div id="leftlayout">
+               <div style="padding: 4px;">
+                  <label for="small-num">Small numbers</label>
+                  <input type="checkbox" id="small-num">
+               </div>
             </div>
          </div>
          <div>
@@ -59,7 +63,7 @@
             </div>
          </div>
          <div id="rightlayout">
-            <div class="align-middle">
+            <div>
                <div class="right-layout-button row mx-5">
                   <button type="button" id="checkbutton" class="btn btn-outline-success btn-sm"
                      title="Check for mistakes.">Check</button>
