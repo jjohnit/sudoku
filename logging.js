@@ -12,7 +12,7 @@
 
 var ENABLE_NETWORK_LOGGING = true; // Controls network logging.
 var ENABLE_CONSOLE_LOGGING = false; // Controls console logging.
-var LOG_VERSION = 'A';             // Labels every entry with version: "A".
+var LOG_VERSION = 'B';             // Labels every entry with version: "A".
 
 // These event types are intercepted for logging before jQuery handlers.
 var EVENT_TYPES_TO_LOG = {
@@ -175,7 +175,7 @@ if (ENABLE_NETWORK_LOGGING || ENABLE_CONSOLE_LOGGING) {
 //
 /////////////////////////////////////////////////////////////////////////////
 
-// "A" version network log submission function
+// "B" version network log submission function
 // submits to the google form at this URL:
 // docs.google.com/forms/d/e/1FAIpQLSe5cQEPzVhqB7m3EABW9NGwVCDB2T7GDGOo-n-TZel-4edWwQ/viewform?usp=sf_link
 function sendNetworkLog(
