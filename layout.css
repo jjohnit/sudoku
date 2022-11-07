@@ -193,15 +193,15 @@ div.sudoku-border.focus {
 
 /* A written answer number */
 div.sudoku-answer {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   cursor: pointer;
   padding: 0;
   margin: 0px;
   border: 0;
   color: #777;
-  font: 40px Handlee, sans-serif;
+  font: 32px Handlee, sans-serif;
 }
 
 .numberkey-text {
@@ -340,11 +340,30 @@ div.sudoku-popup#intro {
 
 .right-layout-button {
   margin: 10px;
+  margin-left: 0px;
 }
 
 .numberkey-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+#buttons-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+}
+
+#leftlayout {
+  display: grid;
   justify-items: center;
 }

@@ -41,7 +41,7 @@
             </div>
          </div>
       </div>
-      <div class="col-8 main-container mx-auto">
+      <div class="main-container mx-auto" style="max-width: fit-content;">
          <div>
             <i id="help-numberkey" class="fa fa-duotone fa-circle-info" data-toggle="tooltip"
                title="Keyboard can be used for selecting a number.&#013;Use spacebar for delete."></i>
@@ -62,14 +62,14 @@
                   &raquo;</button>
             </div>
          </div>
-         <div id="rightlayout">
-            <div>
-               <div class="right-layout-button row mx-5">
-                  <button type="button" id="checkbutton" class="btn btn-outline-success btn-sm"
+         <div id="rightlayout" style="justify-self: left; height: 80%; width: 100%;">
+            <div id="buttons-container">
+               <div class="right-layout-button">
+                  <button type="button" id="checkbutton" class="btn btn-outline-success"
                      title="Check for mistakes.">Check</button>
                </div>
-               <div class="right-layout-button row mx-5">
-                  <button type="button" id="clearbutton" class="btn btn-outline-danger btn-sm"
+               <div class="right-layout-button">
+                  <button type="button" id="clearbutton" class="btn btn-outline-danger"
                      title="Reset puzzle.">Clear</button>
                </div>
             </div>
@@ -82,9 +82,9 @@
          <p>In this experiment, you will solve mini Sudoku puzzles.
          <p>The rules of Sudoku are to fill in all the digits so that no duplicates
             appear in any row, column or bold-bordered square.
-         <p>This version of the interface uses the mouse.
-            To write a number, click on a handwritten number on the side,
-            then click on a square. Click Next to go to the next puzle.
+         <p>To write a number, click on a handwritten number on the side, or
+            press the number in keyboard, then click on a square. 
+            Click Next to go to the next puzle.
          <p>Practice on puzzle #1. Then starting with puzzle #2,
             solve as many puzzles as quickly and correctly as you can.
       </div>
